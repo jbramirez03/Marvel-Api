@@ -5,7 +5,7 @@ const searchButton = document.querySelector("#search-button");
 var PRIV_KEY = "b62c40680e3ea3090a2462bc3021628651c2d45f";
 var PUBLIC_KEY = "ab9297e9d4bda4ab94cb17eb9e3fe843";
 let thumbnails = document.querySelectorAll(".thumbnail");
-
+let characterImage = document.querySelector("");
 
 const displayImages = (call) => {
   
