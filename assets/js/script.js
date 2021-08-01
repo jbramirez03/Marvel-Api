@@ -1,6 +1,8 @@
 // Defined variables used
 const characterSearched = document.querySelector("#search-input");
 const searchButton = document.querySelector("#search-button");
+const goBackBtn = document.querySelector("#go-back");
+const moreBtn = document.querySelector("#more");
 // keys to access api
 var PRIV_KEY = "b62c40680e3ea3090a2462bc3021628651c2d45f";
 var PUBLIC_KEY = "ab9297e9d4bda4ab94cb17eb9e3fe843";
@@ -14,8 +16,10 @@ const displayImages = (call, index) => {
   }
 };
 
+
+
   // function that makes api call and implements api key and hash
-function getCharacterComic (heroInput, index) {
+function getCharacterComic (heroInput) {
 
   // you need a new ts every request                                                                                    
   const ts = new Date().getTime();
@@ -39,13 +43,16 @@ function getCharacterComic (heroInput, index) {
         })
         .then (function (newdata) {
           console.log(newdata);
-          displayImages(newdata, index);
+          displayImages(newdata, 0);
+          moreBtn.addEventListener("click", ()=>{
+            displayImages(newdata, 6);
+          });
         })
         
     });
 }
 
 searchButton.addEventListener("click", () =>{
-  getCharacterComic(characterSearched.value, 0);
+  getCharacterComic(characterSearched.value);
 });
 
