@@ -7,15 +7,15 @@ var PUBLIC_KEY = "ab9297e9d4bda4ab94cb17eb9e3fe843";
 let thumbnails = document.querySelectorAll(".thumbnail");
 // let characterImage = document.querySelector("");
 
-const displayImages = (call) => {
+const displayImages = (call, index) => {
   
   for(let i = 0; i < thumbnails.length; i++){
-    thumbnails[i].setAttribute("src", call.data.results[i].images[0].path + '.jpg');
+    thumbnails[i].setAttribute("src", call.data.results[i+index].images[0].path + '.jpg');
   }
 };
 
   // function that makes api call and implements api key and hash
-function getCharacterComic (heroInput) {
+function getCharacterComic (heroInput, index) {
 
   // you need a new ts every request                                                                                    
   const ts = new Date().getTime();
@@ -39,13 +39,13 @@ function getCharacterComic (heroInput) {
         })
         .then (function (newdata) {
           console.log(newdata);
-          displayImages(newdata);
+          displayImages(newdata, index);
         })
         
     });
 }
 
 searchButton.addEventListener("click", () =>{
-  getCharacterComic(characterSearched.value);
+  getCharacterComic(characterSearched.value, 0);
 });
 
