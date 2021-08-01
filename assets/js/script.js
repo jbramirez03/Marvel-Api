@@ -72,8 +72,13 @@ function getCharacterComic (heroInput) {
         
     });
 }
-
+let level1 = document.querySelector("#level-1");
+  let level2 = document.querySelector("#level-2");
 searchButton.addEventListener("click", () =>{
+  level1.classList.remove("levels");
+  level2.classList.remove("levels");
   getCharacterComic(characterSearched.value);
 });
+
+
 
