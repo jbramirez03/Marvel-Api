@@ -1,126 +1,38 @@
 <!DOCTYPE html>
-<html class="html-class" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel api project</title>
+    <title>Marvel revamped</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marvel&display=swap" rel="stylesheet">
+    <link>
 </head>
 <body>
-    <!-- container holding search bar search button and next and back buttons -->
-    <div class="container">
-        <h1 id="page-title" class = "has-text-centered is-size-1 ">Welcome
-        </h1>
-        <div class="column is-three-quarters is-align-content-center search is-flex is-justify-content-center">
-            <input type="text" id ="character-input" class="search_bar input" placeholder="Looking for a Marvel character?">
-            <button class="search_btn">
-                Find comics
-            </button>
-            <div class="show_buttons">
-            <Button id="go-back" class="go-back-button">Go Back</Button>
-            <button id="go-more" class="show-more-button">More</button>
-            <Button id="go-next" class="show-more-button">Show more</Button>
-        </div>
-        </div>
-    </div>
-
-    <!-- container holding result blocks that contain image of comic and title -->
-    <div class="search_results_container columns">
-        <div class="column is-2">
-        <div class="results">
-            <div class="image_result">
-                <img class="thumbnail">
-            </div>
-            <div class="description">
-                <p class="is-flex mt-4 description-text"></p>
-            </div>
-        </div>
-        </div>
-        <div class="column is-2">
-        <div class="results">
-            <div class="image_result">
-                <img class="thumbnail">
-            </div>
-            <div class="description">
-                <p class="is-flex mt-4 description-text"></p>
-            </div>
-        </div>
-        </div>
-        <div class="column is-2">
-        <div class="results">
-            <div class="image_result">
-                <img class="thumbnail">
-            </div>
-            <div class="description">
-                <p class="is-flex mt-4 description-text"></p>
-            </div>
-        </div>
-        </div>
-        <div class="column is-2">
-        <div class="results">
-            <div class="image_result">
-                <img class="thumbnail">
-            </div>
-            <div class="description">
-                <p class="is-flex mt-4 description-text"></p>
-            </div>
-        </div>
-        </div>
-        <div class="column is-2">
-        <div class="results">
-            <div class="image_result">
-                <img class="thumbnail">
-            </div>
-            <div class="description">
-                <p class="is-flex mt-4 description-text"></p>
-            </div>
-        </div>
-        </div>
-        <div class="column is-2">
-        <div class="results">
-            <div class="image_result">
-                <img class="thumbnail">
-            </div>
-            <div class="description">
-                <p class="is-flex mt-4 description-text"></p>
-            </div>
-        </div>
-        </div>
-        
-    </div>
-
-
-
-    <!-- modal to hold individual information about a comic once the learn more button is clicked -->
-    <div id="modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">More comic info</p>
-            <button id="close-btn" class="delete" aria-label="close"></button>
-          </header>
-          <section class="modal-card-body">
-              <div class="content">
-              <h1>Comic description:</h1>
-              <p id="comic-description"></p>
-              <h3 class="creator">Comic creators:</h3>
-              <div class="comic-creators"></div>
-              </div>
-          </section>
-          <footer class="modal-card-foot">
-            <p id="footer-modal">Modal Footer</p>
-          </footer>
-        </div>
-      </div>
     
-    <!-- javascript and crypto js used -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script rel="stylesheet" src="assets/js/script.js"></script>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <p class="navbar-item">Marvel Comics</p>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item">Info</a>
+            </div>
+        </nav>
+    
+    <main class="column">
+
+        <div class="column">
+            <input class="input" type="text" placeholder="Text input">
+        </div>
+        <div class="column is-flex is-justify-content-center">
+            <button class="">Button</button>
+        </div>
+
+    </main>
+
+
+
+    
 </body>
 </html>
