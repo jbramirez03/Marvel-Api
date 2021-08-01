@@ -17,8 +17,8 @@
     <div class="container">
         <h1 id="page-title" class = "has-text-centered is-size-1 ">Welcome
         </h1>
-        <div class="search">
-            <input type="text" id ="character-input" class="search_bar" placeholder="Looking for a Marvel character?">
+        <div class="column is-three-quarters is-align-content-center search is-flex is-justify-content-center">
+            <input type="text" id ="character-input" class="search_bar input" placeholder="Looking for a Marvel character?">
             <button class="search_btn">
                 Find comics
             </button>
@@ -31,75 +31,71 @@
     </div>
 
     <!-- container holding result blocks that contain image of comic and title -->
-    <div class="search_results_container">
+    <div class="search_results_container columns">
+        <div class="column is-2">
         <div class="results">
             <div class="image_result">
                 <img class="thumbnail">
             </div>
             <div class="description">
-                <p class="description-text"></p>
-            </div>
-            <div class="learn">
-                <button id="learn-btn" class="learn_more">Learn More</button>
+                <p class="is-flex mt-4 description-text"></p>
             </div>
         </div>
+        </div>
+        <div class="column is-2">
         <div class="results">
             <div class="image_result">
                 <img class="thumbnail">
             </div>
             <div class="description">
-                <p class="description-text"></p>
-            </div>
-            <div class="learn">
-                <button id="learn-btn" class="learn_more">Learn More</button>
+                <p class="is-flex mt-4 description-text"></p>
             </div>
         </div>
+        </div>
+        <div class="column is-2">
         <div class="results">
             <div class="image_result">
                 <img class="thumbnail">
             </div>
             <div class="description">
-                <p class="description-text"></p>
-            </div>
-            <div class="learn">
-                <button id="learn-btn" class="learn_more">Learn More</button>
+                <p class="is-flex mt-4 description-text"></p>
             </div>
         </div>
+        </div>
+        <div class="column is-2">
         <div class="results">
             <div class="image_result">
                 <img class="thumbnail">
             </div>
             <div class="description">
-                <p class="description-text"></p>
-            </div>
-            <div class="learn">
-                <button id="learn-btn" class="learn_more">Learn More</button>
+                <p class="is-flex mt-4 description-text"></p>
             </div>
         </div>
+        </div>
+        <div class="column is-2">
         <div class="results">
             <div class="image_result">
                 <img class="thumbnail">
             </div>
             <div class="description">
-                <p class="description-text"></p>
-            </div>
-            <div class="learn">
-                <button id="learn-btn" class="learn_more">Learn More</button>
+                <p class="is-flex mt-4 description-text"></p>
             </div>
         </div>
+        </div>
+        <div class="column is-2">
         <div class="results">
             <div class="image_result">
                 <img class="thumbnail">
             </div>
             <div class="description">
-                <p class="description-text"></p>
+                <p class="is-flex mt-4 description-text"></p>
             </div>
-            <div class="learn">
-                <button id="learn-btn" class="learn_more">Learn More</button>
-            </div>
+        </div>
         </div>
         
     </div>
+
+
 
     <!-- modal to hold individual information about a comic once the learn more button is clicked -->
     <div id="modal" class="modal">
