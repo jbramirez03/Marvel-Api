@@ -3,7 +3,6 @@ const characterSearched = document.querySelector("#search-input");
 const searchButton = document.querySelector("#search-button");
 const goBackBtn = document.querySelector("#go-back");
 const moreBtn = document.querySelector("#more");
-const titles = document.querySelectorAll(".title");
 
 // keys to access api
 var PRIV_KEY = "b62c40680e3ea3090a2462bc3021628651c2d45f";
@@ -28,6 +27,8 @@ const displaySelfie = (call) => {
   let characterImage = document.querySelector("#character-image");
   characterImage.setAttribute("src", call.data.results[0].thumbnail.path + ".jpg");
 };
+
+
 
 
 
@@ -63,7 +64,6 @@ function getCharacterComic (heroInput) {
 
           moreBtn.addEventListener("click", ()=>{
             displayImages(newdata, 10);
-          
           });
 
 
