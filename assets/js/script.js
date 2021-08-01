@@ -68,6 +68,9 @@ function getCharacterComic (heroInput) {
             displayImages(newdata, 10);
           });
 
+          goBackBtn.addEventListener("click", () => {
+            displayImages(newdata, 0);
+          });
 
 
         })
