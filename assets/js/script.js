@@ -5,7 +5,8 @@ const goBackBtn = document.querySelector("#go-back");
 const moreBtn = document.querySelector("#more");
 let level1 = document.querySelector("#level-1");
 let level2 = document.querySelector("#level-2");
-
+let modal = document.querySelector("#modal");
+const closeBtn = document.querySelector("#close-btn");
 
 // keys to access api
 var PRIV_KEY = "b62c40680e3ea3090a2462bc3021628651c2d45f";
@@ -31,8 +32,13 @@ const displaySelfie = (call) => {
   characterImage.setAttribute("src", call.data.results[0].thumbnail.path + ".jpg");
 };
 
-
-
+const comicDetails = () => {
+  for(let i = 0; i < thumbnails.length; i++){
+    thumbnails[i].addEventListener("click", ()=> {
+      modal.classList.add("is-active");
+    });
+  }
+};
 
 
   // function that makes api call and implements api key and hash
@@ -73,7 +79,7 @@ function getCharacterComic (heroInput) {
             displayImages(newdata, 0);
           });
 
-
+          comicDetails();
         })
         
     });
@@ -86,4 +92,9 @@ searchButton.addEventListener("click", () =>{
 });
 
 
+
+
+closeBtn.addEventListener("click", ()=> {
+  modal.classList.remove("is-active");
+});
 
