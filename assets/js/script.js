@@ -11,6 +11,7 @@ let comicDescription = document.querySelector("#comic-description");
 let comicImage = document.querySelector("#comic-image");
 let comicCreators = document.querySelector("#comic-creators");
 let comicTitle = document.querySelector("#comic-title");
+let comicCharacters = document.querySelector("#comic-characters");
 
 
 // keys to access api
@@ -41,6 +42,7 @@ const comicDetails = (url, index) => {
   for(let i = 0; i < thumbnails.length; i++){
     thumbnails[i].addEventListener("click", ()=> {
       comicCreators.innerHTML = '';
+      comicCharacters.innerHTML = '';
       modal.classList.add("is-active");
       let image = url.data.results[i+index].thumbnail.path + ".jpg";
       let title = url.data.results[i+index].title;
@@ -50,16 +52,21 @@ const comicDetails = (url, index) => {
       comicDescription.textContent = description;
       let creators = url.data.results[i+index].creators.items;
       let roles = url.data.results[i+index].creators.items;
+      let characters = url.data.results[i+index].characters.items;
       for(let j = 0; j < creators.length; j++){
         let creator = document.createElement("li");
         creator.textContent = creators[j].name + ":" + roles[j].role;
         comicCreators.append(creator);
       }
+      for(let g = 0; g < characters.length; g++){
+        let character = document.createElement("li");
+        character.textContent = characters[g].name;
+        comicCharacters.append(character);
+      }
     });
   }
   closeBtn.addEventListener("click", ()=> {
     modal.classList.remove("is-active");
-    // comicCreators.innerHTML = '';
   });
 };
 
