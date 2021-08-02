@@ -18,3 +18,9 @@
 .thumbnail {
     border-radius: 5px;
 }
+
+#go-back, #more, #search-button {
+    background-color: #6A0C0B;
+    border: none;
+    color: white;
+}
