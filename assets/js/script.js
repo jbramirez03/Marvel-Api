@@ -47,13 +47,7 @@ const comicDetails = (url, index) => {
       comicImage.setAttribute("src", image);
       comicTitle.textContent = title;
       comicDescription.textContent = description;
-      let creators = url.data.results[i+index].creators.items;
-      let roles = url.data.results[i+index].creators.items;
-      for(let j = 0; j < creators.length; j++){
-        let creator = document.createElement("li");
-        creator.textContent = creators[j].name + ":" + roles[j].role;
-        comicCreators.append(creator);
-      }
+      
     });
   }
 };
@@ -91,13 +85,13 @@ function getCharacterComic (heroInput) {
           
 
           moreBtn.addEventListener("click", ()=>{
-            displayImages(newdata, 10);
             comicDetails(newdata, 10);
+            displayImages(newdata, 10);
           });
 
           goBackBtn.addEventListener("click", () => {
-            displayImages(newdata, 0);
             comicDetails(newdata, 0);
+            displayImages(newdata, 0);
           });
 
           
@@ -112,11 +106,11 @@ searchButton.addEventListener("click", () =>{
   getCharacterComic(characterSearched.value);
 });
 
-
-
-
 closeBtn.addEventListener("click", ()=> {
   modal.classList.remove("is-active");
   comicCreators.innerHTML = '';
 });
+
+
+
 
