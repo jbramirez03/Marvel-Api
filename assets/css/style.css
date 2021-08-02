@@ -2,8 +2,19 @@
     display:none;
 }
 
-
+#navbar {
+    background-color: #760C10;
+}
   
 
+#character-name {
+    color: white;
+}
 
- 
+.text-color {
+    color: white;
+}
+
+.thumbnail {
+    border-radius: 5px;
+}
