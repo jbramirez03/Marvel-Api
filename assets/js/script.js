@@ -6,6 +6,7 @@ const moreBtn = document.querySelector("#more");
 let level1 = document.querySelector("#level-1");
 let level2 = document.querySelector("#level-2");
 
+
 // keys to access api
 var PRIV_KEY = "b62c40680e3ea3090a2462bc3021628651c2d45f";
 var PUBLIC_KEY = "ab9297e9d4bda4ab94cb17eb9e3fe843";
