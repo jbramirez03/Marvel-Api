@@ -40,6 +40,7 @@ const displaySelfie = (call) => {
 const comicDetails = (url, index) => {
   for(let i = 0; i < thumbnails.length; i++){
     thumbnails[i].addEventListener("click", ()=> {
+      comicCreators.innerHTML = '';
       modal.classList.add("is-active");
       let image = url.data.results[i+index].thumbnail.path + ".jpg";
       let title = url.data.results[i+index].title;
@@ -47,9 +48,19 @@ const comicDetails = (url, index) => {
       comicImage.setAttribute("src", image);
       comicTitle.textContent = title;
       comicDescription.textContent = description;
-      
+      let creators = url.data.results[i+index].creators.items;
+      let roles = url.data.results[i+index].creators.items;
+      for(let j = 0; j < creators.length; j++){
+        let creator = document.createElement("li");
+        creator.textContent = creators[j].name + ":" + roles[j].role;
+        comicCreators.append(creator);
+      }
     });
   }
+  closeBtn.addEventListener("click", ()=> {
+    modal.classList.remove("is-active");
+    // comicCreators.innerHTML = '';
+  });
 };
 
 
@@ -106,10 +117,7 @@ searchButton.addEventListener("click", () =>{
   getCharacterComic(characterSearched.value);
 });
 
-closeBtn.addEventListener("click", ()=> {
-  modal.classList.remove("is-active");
-  comicCreators.innerHTML = '';
-});
+
 
 
 
