@@ -47,7 +47,13 @@ const comicDetails = (url, index) => {
       comicImage.setAttribute("src", image);
       comicTitle.textContent = title;
       comicDescription.textContent = description;
-
+      let creators = url.data.results[i+index].creators.items;
+      let roles = url.data.results[i+index].creators.items;
+      for(let j = 0; j < creators.length; j++){
+        let creator = document.createElement("li");
+        creator.textContent = creators[j].name + ":" + roles[j].role;
+        comicCreators.append(creator);
+      }
     });
   }
 };
@@ -111,5 +117,6 @@ searchButton.addEventListener("click", () =>{
 
 closeBtn.addEventListener("click", ()=> {
   modal.classList.remove("is-active");
+  comicCreators.innerHTML = '';
 });
 
