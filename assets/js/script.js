@@ -1,5 +1,5 @@
 // Defined variables used
-const characterSearched = document.querySelector("#search-input");
+let characterSearched = document.querySelector("#search-input");
 const searchButton = document.querySelector("#search-button");
 const goBackBtn = document.querySelector("#go-back");
 const moreBtn = document.querySelector("#more");
@@ -55,7 +55,7 @@ const comicDetails = (url, index) => {
       let characters = url.data.results[i+index].characters.items;
       for(let j = 0; j < creators.length; j++){
         let creator = document.createElement("li");
-        creator.textContent = creators[j].name + ":" + roles[j].role;
+        creator.textContent = creators[j].name + ": " + roles[j].role;
         comicCreators.append(creator);
       }
       for(let g = 0; g < characters.length; g++){
@@ -122,6 +122,7 @@ searchButton.addEventListener("click", () =>{
   level1.classList.remove("levels");
   level2.classList.remove("levels");
   getCharacterComic(characterSearched.value);
+  characterSearched.value = '';
 });
 
 
