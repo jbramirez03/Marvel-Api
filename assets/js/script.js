@@ -7,6 +7,11 @@ let level1 = document.querySelector("#level-1");
 let level2 = document.querySelector("#level-2");
 let modal = document.querySelector("#modal");
 const closeBtn = document.querySelector("#close-btn");
+let comicDescription = document.querySelector("#comic-description");
+let comicImage = document.querySelector("#comic-image");
+let comicCreators = document.querySelector("#comic-creators");
+let comicTitle = document.querySelector("#comic-title");
+
 
 // keys to access api
 var PRIV_KEY = "b62c40680e3ea3090a2462bc3021628651c2d45f";
@@ -32,10 +37,17 @@ const displaySelfie = (call) => {
   characterImage.setAttribute("src", call.data.results[0].thumbnail.path + ".jpg");
 };
 
-const comicDetails = () => {
+const comicDetails = (url, index) => {
   for(let i = 0; i < thumbnails.length; i++){
     thumbnails[i].addEventListener("click", ()=> {
       modal.classList.add("is-active");
+      let image = url.data.results[i+index].thumbnail.path + ".jpg";
+      let title = url.data.results[i+index].title;
+      let description = url.data.results[i+index].description;
+      comicImage.setAttribute("src", image);
+      comicTitle.textContent = title;
+      comicDescription.textContent = description;
+
     });
   }
 };
@@ -68,18 +80,21 @@ function getCharacterComic (heroInput) {
         })
         .then (function (newdata) {
           console.log(newdata);
+          comicDetails(newdata, 0);
           displayImages(newdata, 0);
           
 
           moreBtn.addEventListener("click", ()=>{
             displayImages(newdata, 10);
+            comicDetails(newdata, 10);
           });
 
           goBackBtn.addEventListener("click", () => {
             displayImages(newdata, 0);
+            comicDetails(newdata, 0);
           });
 
-          comicDetails();
+          
         })
         
     });
