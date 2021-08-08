@@ -89,7 +89,7 @@ function getCharacterComic (heroInput) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
       displayInfo(data);
       displaySelfie(data);
       const charactersId = data.data.results[0].id;
@@ -100,7 +100,7 @@ function getCharacterComic (heroInput) {
           return response.json();
         })
         .then (function (newdata) {
-          console.log(newdata);
+          // console.log(newdata);
           comicDetails(newdata, 0);
           displayImages(newdata, 0);
           
