@@ -27,13 +27,11 @@ This Project is covered by the [MIT] license
 ## Challenges
 The main challenge for this revamped project was figuring out a good layout that would look good on both desktop and mobile. Another challenge was figuring out a good color contrast in order to achieve accessiblity for a broader audience. A big issue was the spelling for some heros, based on the Api some of the characters names are there actual name and not their aliases so it sometimes does not recognize a character name unless its their birth name.
 ## Technologies
-<br>
 <img align="left" width="26px" alt="CSS" src="https://user-images.githubusercontent.com/82244776/128645607-b787e5cb-6f1b-45ab-8c18-ff2e72e27095.png">
 <img align="left" width="26px" alt="Javascript" src="https://user-images.githubusercontent.com/82244776/128645657-2dad4760-43e6-42a9-90a5-8f8b3f62b4a0.png">
 <img align="left" width="27px" alt="Html" src="https://user-images.githubusercontent.com/82244776/128645723-50b9f81f-429e-48ce-859c-ac23b766a1d6.png">
 
-[<img align="left" width="26px" alt="Bulma" src="https://user-images.githubusercontent.com/82244776/128645995-a66810f8-5616-43be-b295-79673e2b828a.png"/>](https://bulma.io/)<br>
-<br>
+[<img align="left" width="26px" alt="Bulma" src="https://user-images.githubusercontent.com/82244776/128645995-a66810f8-5616-43be-b295-79673e2b828a.png"/>](https://bulma.io/)<br><br>
 
 ## Features
 This site allows for you to look for any character in the marvel universe. It also has a good interface for mobile view.
