@@ -62,6 +62,9 @@ const comicDetails = (url, index) => {
         let character = document.createElement("li");
         character.textContent = characters[g].name;
         comicCharacters.append(character);
+        character.addEventListener("click", ()=>{
+          getCharacterComic(character.textContent);
+        })
       }
     });
   }
@@ -123,6 +126,15 @@ searchButton.addEventListener("click", () =>{
   level2.classList.remove("levels");
   getCharacterComic(characterSearched.value);
   characterSearched.value = '';
+});
+
+characterSearched.addEventListener('keypress',(e)=>{
+  if(e.key === "Enter"){
+    level1.classList.remove("levels");
+  level2.classList.remove("levels");
+  getCharacterComic(characterSearched.value);
+  characterSearched.value = '';
+  }
 });
 
 
