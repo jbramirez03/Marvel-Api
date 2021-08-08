@@ -48,7 +48,7 @@ The main challenge for this revamped project was figuring out a good layout that
 ## Features
 This site allows for you to look for any character in the marvel universe. It also has a good interface for mobile view.
 ## Future Development
-Be able to search for more than just 20 comics at a time and implement page buttons. Also be able to click on any character from comic description and automatically search for that character.
+Be able to search for more than just 20 comics at a time and implement page buttons.
 ## How to Contribute
 Fork the Repo and make a pull request for code to be reviewed and considered for merge to main branch.
 ## Tests
