@@ -19,6 +19,18 @@ This is a website that is based on a previous project worked on by me and other 
 - [Questions](#questions)
 ## Usage
 You input a hero/villain name based in the marvel universe into the search bar and you must click search or enter for your hero/villain to be searched. You then are displayed with 10 comics for that character, for each displayed comic if you click on any it will display a modal with more information on the comic and the contributors of the comic.
+### Character searched
+![Searched-Character](assets/images/character-pic.png)
+### Displayed comics
+![Displayed-comics](assets/images/displayed-comics.png)
+### Opened modal
+![Opened-modal](assets/images/opened-modal.png)
+### Comic creators/characters
+Some comics did not have a desription so the description block appears blank.
+![Comic-creators](assets/images/comic-creators.png)
+### Working comic description
+This shows that the comic description block does work with comics that have a description available.
+![Working-description](assets/images/working-description.png)
 ## Credits
 Jason Barrera-Ramirez<br><br>
 [<img align="left" width="28px" alt="LinkedIn" src="https://user-images.githubusercontent.com/82244776/128110957-497edff3-59dc-41d6-89bc-be7570e441fe.png" />][LinkedIn]<br><br>
